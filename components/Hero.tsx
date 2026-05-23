@@ -13,10 +13,11 @@ import {
   GraduationCap,
   BookOpen,
 } from "lucide-react";
-import { siteConfig, typingRoles } from "@/data/portfolio";
+import { siteConfig } from "@/data/portfolio";
 import { Button } from "@/components/ui/Button";
 import { TypingAnimation } from "@/components/ui/TypingAnimation";
 import { TechStack } from "@/components/TechStack";
+import { useTranslations } from "@/hooks/useTranslations";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const socials = [
@@ -25,13 +26,15 @@ const socials = [
   { icon: Mail, href: `mailto:${siteConfig.email}`, label: "Email" },
 ];
 
-const stats = [
-  { value: "8.36", label: "CGPA", icon: GraduationCap, color: "text-lime-400" },
-  { value: String(siteConfig.githubRepos), label: "Repos", icon: Github, color: "text-green-400" },
-  { value: "2", label: "IEEE Papers", icon: BookOpen, color: "text-emerald-400" },
-];
-
 export function Hero() {
+  const { t, tArray } = useTranslations();
+
+  const stats = [
+    { value: "8.36", label: t("hero.cgpa"), icon: GraduationCap },
+    { value: String(siteConfig.githubRepos), label: t("hero.repos"), icon: Github },
+    { value: "2", label: t("hero.ieeePapers"), icon: BookOpen },
+  ];
+
   return (
     <section
       id="home"
@@ -44,36 +47,35 @@ export function Hero() {
           animate="visible"
           className="flex flex-col-reverse items-center gap-12 lg:grid lg:grid-cols-2 lg:flex-none lg:gap-20"
         >
-          {/* Text — below image on mobile */}
           <div className="w-full text-center lg:text-left">
             <motion.div
               variants={fadeInUp}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-lime-500/40 bg-lime-500/10 px-4 py-2 text-sm text-lime-300 shadow-[0_0_20px_rgba(87,255,26,0.15)]"
+              className="badge-cyber mb-6 inline-flex items-center gap-2 px-4 py-2 text-sm neon-glow"
             >
-              <Sparkles className="h-4 w-4 text-lime-400" />
-              <span>Open to opportunities</span>
+              <Sparkles className="h-4 w-4 text-theme-accent" />
+              <span>{t("hero.openToWork")}</span>
             </motion.div>
 
             <motion.p variants={fadeInUp} className="section-label mb-3">
-              Portfolio · {siteConfig.location}
+              {t("hero.portfolioLabel")} · {siteConfig.location}
             </motion.p>
 
             <motion.h1
               variants={fadeInUp}
               className="font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              Hi, I&apos;m{" "}
+              {t("hero.greeting")}{" "}
               <span className="gradient-text block sm:inline">{siteConfig.name}</span>
             </motion.h1>
 
             <motion.div variants={fadeInUp} className="mt-5 text-xl sm:text-2xl lg:text-3xl">
-              <TypingAnimation words={typingRoles} />
+              <TypingAnimation words={tArray("hero.typingRoles")} />
             </motion.div>
 
             <motion.p variants={fadeInUp} className="body-text mx-auto mt-6 max-w-xl lg:mx-0">
-              <span className="font-semibold text-slate-200">{siteConfig.role}</span>
+              <span className="font-semibold text-theme-fg">{t("hero.role")}</span>
               <br />
-              <span className="mt-2 inline-block text-slate-400">{siteConfig.tagline}</span>
+              <span className="mt-2 inline-block opacity-80">{t("hero.tagline")}</span>
             </motion.p>
 
             <motion.div
@@ -85,11 +87,11 @@ export function Hero() {
                 return (
                   <div
                     key={stat.label}
-                    className="card-soft flex flex-col items-center gap-2 px-3 py-4 text-center transition-colors hover:border-lime-500/40 hover:shadow-[0_0_24px_rgba(87,255,26,0.12)]"
+                    className="card-soft flex flex-col items-center gap-2 px-3 py-4 text-center neon-glow-hover"
                   >
-                    <Icon className={`h-5 w-5 ${stat.color}`} />
+                    <Icon className="h-5 w-5 text-theme-accent" />
                     <p className="font-display text-2xl font-bold gradient-text">{stat.value}</p>
-                    <p className="text-xs text-slate-500">{stat.label}</p>
+                    <p className="text-xs text-theme-muted">{stat.label}</p>
                   </div>
                 );
               })}
@@ -103,15 +105,15 @@ export function Hero() {
             >
               <Button href={siteConfig.resumeUrl} download variant="primary" className="h-11 w-full sm:w-auto">
                 <Download className="h-4 w-4" />
-                Download Resume
+                {t("hero.downloadResume")}
               </Button>
               <Button href="#contact" variant="secondary" className="h-11 w-full sm:w-auto">
                 <Mail className="h-4 w-4" />
-                Contact Me
+                {t("hero.contactMe")}
               </Button>
               <Button href="#projects" variant="ghost" className="h-11 w-full sm:w-auto">
                 <FolderOpen className="h-4 w-4" />
-                View Projects
+                {t("hero.viewProjects")}
               </Button>
             </motion.div>
 
@@ -126,7 +128,7 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.12, y: -3 }}
-                  className="flex h-12 w-12 items-center justify-center rounded-2xl glass text-slate-400 transition-colors hover:border-lime-500/40 hover:text-lime-400 neon-glow-hover"
+                  className="flex h-12 w-12 items-center justify-center rounded-2xl glass text-theme-muted neon-glow-hover hover:text-theme-accent"
                   aria-label={label}
                 >
                   <Icon className="h-5 w-5" />
@@ -135,12 +137,11 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Profile — first on mobile */}
           <motion.div
             variants={fadeInUp}
             className="relative mx-auto w-full max-w-sm lg:max-w-lg"
           >
-            <div className="absolute inset-4 rounded-full bg-lime-500/20 blur-3xl" />
+            <div className="theme-glow-orb absolute inset-4 rounded-full blur-3xl" />
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -159,9 +160,15 @@ export function Hero() {
               </div>
             </motion.div>
 
-            <div className="absolute -right-2 -bottom-2 rounded-2xl border border-lime-500/40 bg-black/80 px-4 py-2.5 text-sm font-semibold text-lime-300 shadow-[0_0_24px_rgba(87,255,26,0.2)] backdrop-blur-xl sm:-right-4 sm:-bottom-4 sm:px-5 sm:py-3">
-              <span className="mr-2 inline-block h-2 w-2 rounded-full bg-lime-400 animate-pulse shadow-[0_0_8px_#57ff1a]" />
-              Available for work
+            <div className="badge-cyber absolute -right-2 -bottom-2 px-4 py-2.5 text-sm font-semibold backdrop-blur-xl sm:-right-4 sm:-bottom-4 sm:px-5 sm:py-3">
+              <span
+                className="mr-2 inline-block h-2 w-2 rounded-full animate-pulse"
+                style={{
+                  background: "var(--theme-accent)",
+                  boxShadow: "0 0 8px var(--theme-glow)",
+                }}
+              />
+              {t("hero.availableForWork")}
             </div>
           </motion.div>
         </motion.div>
@@ -171,9 +178,9 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-20 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-slate-500 transition-colors hover:text-lime-400 md:bottom-8 md:flex"
+          className="absolute bottom-20 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-theme-muted transition-colors hover:text-theme-accent md:bottom-8 md:flex"
         >
-          <span className="section-label">Scroll</span>
+          <span className="section-label">{t("hero.scroll")}</span>
           <ChevronDown className="h-5 w-5 animate-bounce" />
         </motion.a>
       </div>

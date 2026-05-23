@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "siteTitle": "Prakash S | AI Engineer & Full Stack Developer",
+    "siteDescription": "Building intelligent systems using AI, Generative AI, Computer Vision, and modern full-stack technologies."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "resume": "Resume",
+    "downloadResume": "Download Resume",
+    "language": "Language",
+    "selectLanguage": "Select language"
+  },
+  "hero": {
+    "openToWork": "Open to opportunities",
+    "portfolioLabel": "Portfolio",
+    "greeting": "Hi, I'm",
+    "role": "AI Trainee Developer & Full Stack Engineer",
+    "tagline": "Building intelligent systems using AI, Generative AI, Computer Vision, and modern full-stack technologies.",
+    "cgpa": "CGPA",
+    "repos": "Repos",
+    "ieeePapers": "IEEE Papers",
+    "techStack": "Tech stack",
+    "downloadResume": "Download Resume",
+    "contactMe": "Contact Me",
+    "viewProjects": "View Projects",
+    "availableForWork": "Available for work",
+    "scroll": "Scroll",
+    "typingRoles": [
+      "AI Trainee Developer",
+      "Full Stack AI Engineer",
+      "Machine Learning Engineer",
+      "Generative AI Developer"
+    ]
+  },
+  "about": {
+    "subtitle": "About Me",
+    "title": "Who I Am",
+    "description": "Professional background, goals, and qualifications.",
+    "summaryTitle": "Professional Summary",
+    "summary": "B.Tech in Artificial Intelligence and Data Science at St. Joseph's Institute of Technology (Nov 2022 – May 2026, CGPA 8.36 up to 7th semester). AI Trainee Developer at Himitsu Labs, with experience in recruitment platforms, multimodal GenAI, legal AI assistants, and IEEE-published research in computer vision and smart agriculture.",
+    "objectiveTitle": "Career Objective",
+    "objective": "To build scalable, user-centric AI solutions — from model training and fine-tuning to full-stack deployment — for hiring, healthcare, safety, and legal accessibility.",
+    "educationTitle": "Education",
+    "degree": "B.Tech — Artificial Intelligence and Data Science",
+    "institution": "St. Joseph's Institute of Technology",
+    "year": "Nov 2022 – May 2026 · CGPA 8.36 (up to 7th sem)",
+    "experienceHighlights": "Experience Highlights",
+    "experienceItems": [
+      "AI Trainee Developer at Himitsu Labs (Jan 2026 – Present)",
+      "ML Trainee at Altrosyn Technologies — Multimodal GenAI Meme Creator",
+      "AI Developer at Read Automation — NeuroHire platform"
+    ],
+    "certificationsPreview": "Certifications"
+  },
+  "skills": {
+    "subtitle": "Skills",
+    "title": "Technical Expertise",
+    "description": "Technologies and tools I use to build intelligent, scalable products.",
+    "categories": {
+      "programming": "Programming",
+      "ai": "AI / ML",
+      "backend": "Backend & Auth",
+      "database": "Database",
+      "data": "Data Skills",
+      "tools": "Tools & Platforms"
+    }
+  },
+  "experience": {
+    "subtitle": "Experience",
+    "title": "My Journey",
+    "description": "Internships, research, and professional milestones.",
+    "types": {
+      "internship": "Internship",
+      "freelance": "Freelance",
+      "research": "Achievement",
+      "certification": "Certification"
+    },
+    "items": {
+      "1": {
+        "title": "AI Trainee Developer",
+        "company": "Himitsu Labs",
+        "period": "Jan 2026 – Present",
+        "description": "AI-based application development across backend and frontend — APIs, AI modules, workflow logic, model integration, and modern web technologies.",
+        "impact": [
+          "Backend APIs and AI workflow logic for intelligent apps",
+          "AI feature development and model integration",
+          "Scalable architecture, automation, and user-centric solutions"
+        ]
+      },
+      "2": {
+        "title": "Machine Learning Trainee",
+        "company": "Altrosyn Technologies Pvt Ltd",
+        "period": "May 2025 – Dec 2025",
+        "description": "Spearheaded Multimodal Generative AI Meme Creator — a GenAI app that converts text or voice commands into memes.",
+        "impact": [
+          "Training, fine-tuning, and integrating core AI models",
+          "Multimodal content generation pipeline",
+          "End-to-end generative AI application development"
+        ]
+      },
+      "3": {
+        "title": "AI Developer",
+        "company": "Read Automation",
+        "period": "Feb 2025 – May 2025",
+        "description": "Built NeuroHire to automate end-to-end hiring workflows and improve recruiter efficiency.",
+        "impact": [
+          "AI-driven resume parsing and candidate shortlisting",
+          "Recruiter dashboard for job and application tracking",
+          "Smart interview scheduling with calendar integration"
+        ]
+      },
+      "4": {
+        "title": "AI Innovate Hackathon — Finalist",
+        "company": "Sri Eshwar College of Engineering (Thiran 2025)",
+        "period": "2025",
+        "description": "Finalist in the AI Innovate Hackathon, Coimbatore — application-oriented AI engineering project.",
+        "impact": ["Prestigious national hackathon recognition"]
+      },
+      "5": {
+        "title": "Project Expo 2k25 — Finalist",
+        "company": "IEEE Education Society & IEEE Photonics Society",
+        "period": "2025",
+        "description": "Finalist at St. Xavier's Catholic College of Engineering — project selected among top entries across disciplines.",
+        "impact": ["IEEE-affiliated project expo recognition"]
+      },
+      "6": {
+        "title": "Blaze a Trail 2.0 — 3rd Place",
+        "company": "St. Joseph's Institute of Technology",
+        "period": "2025",
+        "description": "Secured 3rd place for innovative problem-solving; selected for internship at Read Automation with hands-on AI automation experience.",
+        "impact": [
+          "Award at St. Joseph's Institute of Technology",
+          "Led to Read Automation internship opportunity"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "Portfolio",
+    "title": "Featured Projects",
+    "description": "Open-source and professional AI projects on GitHub.",
+    "categories": {
+      "all": "All Projects",
+      "ai": "AI / ML",
+      "web": "Web Apps",
+      "fullstack": "Full Stack"
+    },
+    "empty": "No projects in this category yet.",
+    "featured": "Featured Project",
+    "private": "Private",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "moreOn": "More on",
+    "items": {
+      "1": {
+        "title": "Medical Chatbot Assistant",
+        "description": "Flask web app leveraging Google Gemini AI for medical condition prediction, symptom analysis, and hospital recommendations with secure data handling and user privacy.",
+        "highlights": [
+          "AI-driven diagnosis with PDF generation for treatment suggestions",
+          "Location-based hospital recommendation system",
+          "Integrated feedback loops to improve AI accuracy over time"
+        ]
+      },
+      "2": {
+        "title": "AI-Powered Accident Assistance System",
+        "description": "Flask-based AI system that detects accidents, extracts license plates via PaddleOCR and OpenCV, and predicts injury severity with a ResNet model.",
+        "highlights": [
+          "Automated emergency response using Twilio API",
+          "Notifies authorities and nearby hospitals",
+          "Deep learning pipeline for severity classification"
+        ]
+      },
+      "3": {
+        "title": "NeuroHire: AI-Powered Recruitment Platform",
+        "description": "Full-stack, AI-driven recruitment platform to automate candidate screening and streamline the hiring process with intelligent resume parsing and recruiter dashboards.",
+        "highlights": [
+          "Ranks candidates by job relevance on recruiter dashboard",
+          "Job posting management and smart candidate shortlisting",
+          "Hiring analytics: time-to-hire and top skills",
+          "Smart interview scheduling with calendar integration"
+        ]
+      },
+      "4": {
+        "title": "Nyayavani: Offline Voice Legal Guardian",
+        "description": "Offline AI legal assistant providing multilingual voice and text-based legal guidance for rural and low-literacy users.",
+        "highlights": [
+          "Legal situation detection with PyTorch and BERT/IndicBERT",
+          "Neo4j knowledge graph for context-aware legal reasoning",
+          "Offline STT/TTS: Whisper/Vosk and Coqui TTS",
+          "FastAPI, React.js, and PostgreSQL stack"
+        ]
+      }
+    }
+  },
+  "certifications": {
+    "subtitle": "Certifications",
+    "title": "Credentials & Learning",
+    "description": "Professional certifications and courses that strengthen my AI and data science foundation.",
+    "viewCredential": "View credential",
+    "items": {
+      "1": "NPTEL Elite Certification — Data Science",
+      "2": "Data Science in KNIME Analytics Platform — Basic Proficiency",
+      "3": "Data Science for Engineers — NPTEL",
+      "4": "Statistics 101 — IBM",
+      "5": "Prompt Engineering Essentials — Simplilearn"
+    }
+  },
+  "contact": {
+    "subtitle": "Contact",
+    "title": "Get In Touch",
+    "description": "Open to internships, AI/ML roles, and collaboration. Reach out via form, email, or LinkedIn.",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "location": "Location"
+    },
+    "preferLinkedIn": "Prefer LinkedIn? Connect on",
+    "orBrowse": "or browse code on",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "you@email.com",
+      "messagePlaceholder": "Tell me about your opportunity or project...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "deliveredTo": "Messages are delivered to"
+    }
+  },
+  "footer": {
+    "builtWith": "Next.js 15"
+  },
+  "currentlyAt": {
+    "title": "AI Trainee Developer",
+    "company": "Himitsu Labs",
+    "period": "Jan 2026 – Present"
+  },
+  "loading": {
+    "initializing": "Initializing portfolio..."
+  },
+  "theme": {
+    "studio": "Theme Studio",
+    "subtitle": "Color + light/dark mode",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "notifications": {
+    "success": "Message sent! I'll get back to you soon.",
+    "successInbox": "Message sent to my inbox! I'll reply soon.",
+    "required": "All fields are required.",
+    "invalidEmail": "Please enter a valid email address.",
+    "sendFailed": "Could not send right now. Please email me directly.",
+    "networkError": "Network error. Please email me directly.",
+    "serverError": "Something went wrong. Please try again later.",
+    "switchingLanguage": "Switching language..."
+  }
+}

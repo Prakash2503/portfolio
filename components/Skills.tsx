@@ -13,6 +13,7 @@ import {
 import { skillCategories } from "@/data/portfolio";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { useTranslations } from "@/hooks/useTranslations";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -25,13 +26,15 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export function Skills() {
+  const { t } = useTranslations();
+
   return (
     <SectionWrapper id="skills" className="section-glow section-alt">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          subtitle="Skills"
-          title="Technical Expertise"
-          description="Technologies and tools I use to build intelligent, scalable products."
+          subtitle={t("skills.subtitle")}
+          title={t("skills.title")}
+          description={t("skills.description")}
         />
 
         <motion.div
@@ -52,19 +55,21 @@ export function Skills() {
               >
                 <div className="card-cyber-accent h-full p-6 pl-5">
                   <div className="mb-5 flex items-center gap-3">
-                    <div className="icon-cyber h-12 w-12 transition-transform group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(87,255,26,0.2)]">
-                      <Icon className="h-6 w-6 text-[#57ff1a]" stroke="#57ff1a" />
+                    <div className="icon-cyber h-12 w-12 transition-transform group-hover:scale-110 neon-glow-hover">
+                      <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="heading-cyber text-lg font-bold">{category.title}</h3>
+                    <h3 className="heading-cyber text-lg font-bold">
+                      {t(`skills.categories.${category.id}`)}
+                    </h3>
                   </div>
 
-                  <ul className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
-                      <li key={skill} className="skill-pill">
+                      <span key={skill} className="skill-pill">
                         {skill}
-                      </li>
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </motion.div>
             );

@@ -42,7 +42,11 @@ export function TypingAnimation({ words }: TypingAnimationProps) {
       <motion.span
         animate={{ opacity: [1, 0] }}
         transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-        className="ml-0.5 inline-block h-[1em] w-0.5 align-middle bg-lime-400 shadow-[0_0_6px_#57ff1a]"
+        className="ml-0.5 inline-block h-[1em] w-0.5 align-middle"
+        style={{
+          background: "var(--theme-accent)",
+          boxShadow: "0 0 6px var(--theme-glow)",
+        }}
       />
     </span>
   );

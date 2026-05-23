@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useReducedMotion } from "@/lib/useReducedMotion";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface Particle {
   x: number;
@@ -15,6 +16,7 @@ interface Particle {
 export function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reducedMotion = useReducedMotion();
+  const { themeId } = useTheme();
 
   useEffect(() => {
     if (reducedMotion) return;
@@ -23,6 +25,10 @@ export function ParticleBackground() {
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    const accentRgb = getComputedStyle(document.documentElement)
+      .getPropertyValue("--theme-accent-rgb")
+      .trim();
 
     let animationId: number;
     const particles: Particle[] = [];
@@ -58,7 +64,7 @@ export function ParticleBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(139, 92, 246, ${p.opacity})`;
+        ctx.fillStyle = `rgba(${accentRgb}, ${p.opacity})`;
         ctx.fill();
 
         particles.slice(i + 1).forEach((p2) => {
@@ -67,7 +73,7 @@ export function ParticleBackground() {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.15 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(${accentRgb}, ${0.15 * (1 - dist / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
@@ -91,14 +97,14 @@ export function ParticleBackground() {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
     };
-  }, [reducedMotion]);
+  }, [reducedMotion, themeId]);
 
   if (reducedMotion) return null;
 
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0 opacity-60"
+      className="pointer-events-none absolute inset-0 opacity-50"
       aria-hidden
     />
   );

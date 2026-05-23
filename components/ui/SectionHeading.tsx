@@ -24,9 +24,15 @@ export function SectionHeading({
     >
       <motion.span
         whileHover={{ scale: 1.03 }}
-        className="badge-cyber mb-4 inline-flex items-center gap-2 px-5 py-1.5 section-label !text-lime-400/90"
+        className="badge-cyber mb-4 inline-flex items-center gap-2 px-5 py-1.5 section-label"
       >
-        <span className="h-1.5 w-1.5 rounded-full bg-lime-400 animate-pulse shadow-[0_0_8px_#57ff1a]" />
+        <span
+          className="h-1.5 w-1.5 rounded-full animate-pulse"
+          style={{
+            background: "var(--theme-accent)",
+            boxShadow: "0 0 8px var(--theme-glow)",
+          }}
+        />
         {subtitle}
       </motion.span>
 
@@ -35,9 +41,25 @@ export function SectionHeading({
       </h2>
 
       <div className="mx-auto mt-5 flex items-center justify-center gap-3">
-        <span className="h-px w-12 bg-gradient-to-r from-transparent to-lime-500/60" />
-        <span className="h-1.5 w-1.5 rotate-45 rounded-sm bg-lime-400/80 shadow-[0_0_6px_#57ff1a]" />
-        <span className="h-px w-12 bg-gradient-to-l from-transparent to-lime-500/60" />
+        <span
+          className="h-px w-12"
+          style={{
+            background: `linear-gradient(to right, transparent, rgba(var(--theme-accent-rgb), 0.6))`,
+          }}
+        />
+        <span
+          className="h-1.5 w-1.5 rotate-45 rounded-sm"
+          style={{
+            background: "var(--theme-accent)",
+            boxShadow: "0 0 6px var(--theme-glow)",
+          }}
+        />
+        <span
+          className="h-px w-12"
+          style={{
+            background: `linear-gradient(to left, transparent, rgba(var(--theme-accent-rgb), 0.6))`,
+          }}
+        />
       </div>
 
       {description && (

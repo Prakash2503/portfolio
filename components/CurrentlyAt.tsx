@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
-import { siteConfig } from "@/data/portfolio";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export function CurrentlyAt() {
-  const { currentRole } = siteConfig;
+  const { t } = useTranslations();
 
   return (
     <motion.div
@@ -16,14 +16,14 @@ export function CurrentlyAt() {
     >
       <a
         href="#experience"
-        className="inline-flex items-center gap-2 rounded-full border border-lime-500/30 bg-black/70 px-4 py-1.5 text-xs font-medium text-slate-300 shadow-[0_0_16px_rgba(87,255,26,0.12)] backdrop-blur-xl transition-colors hover:border-lime-500/50 hover:text-lime-300"
+        className="badge-cyber inline-flex items-center gap-2 px-4 py-1.5 text-xs font-medium backdrop-blur-xl transition-all hover:neon-glow"
       >
-        <Briefcase className="h-3.5 w-3.5 text-lime-400" />
-        <span>
-          {currentRole.title} @ {currentRole.company}
+        <Briefcase className="h-3.5 w-3.5 text-theme-accent" />
+        <span className="text-theme-fg">
+          {t("currentlyAt.title")} @ {t("currentlyAt.company")}
         </span>
-        <span className="text-slate-500">·</span>
-        <span className="text-lime-400/90">{currentRole.period}</span>
+        <span className="text-theme-muted">·</span>
+        <span className="text-theme-accent opacity-90">{t("currentlyAt.period")}</span>
       </a>
     </motion.div>
   );

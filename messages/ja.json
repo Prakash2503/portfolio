@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "siteTitle": "Prakash S | AIエンジニア＆フルスタック開発者",
+    "siteDescription": "AI、生成AI、コンピュータビジョン、最新フルスタック技術でインテリジェントなシステムを構築しています。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "about": "私について",
+    "skills": "スキル",
+    "experience": "経験",
+    "projects": "プロジェクト",
+    "certifications": "資格",
+    "contact": "お問い合わせ",
+    "resume": "履歴書",
+    "downloadResume": "履歴書をダウンロード",
+    "language": "言語",
+    "selectLanguage": "言語を選択"
+  },
+  "hero": {
+    "openToWork": "機会を募集中",
+    "portfolioLabel": "ポートフォリオ",
+    "greeting": "こんにちは、",
+    "role": "AI研修開発者＆フルスタックエンジニア",
+    "tagline": "AI、生成AI、コンピュータビジョン、最新フルスタック技術でインテリジェントなシステムを構築しています。",
+    "cgpa": "CGPA",
+    "repos": "リポジトリ",
+    "ieeePapers": "IEEE論文",
+    "techStack": "技術スタック",
+    "downloadResume": "履歴書をダウンロード",
+    "contactMe": "お問い合わせ",
+    "viewProjects": "プロジェクトを見る",
+    "availableForWork": "お仕事可能です",
+    "scroll": "スクロール",
+    "typingRoles": [
+      "AI研修開発者",
+      "フルスタックAIエンジニア",
+      "機械学習エンジニア",
+      "生成AI開発者"
+    ]
+  },
+  "about": {
+    "subtitle": "私について",
+    "title": "自己紹介",
+    "description": "経歴、目標、資格について。",
+    "summaryTitle": "プロフェッショナル概要",
+    "summary": "St. Joseph's Institute of Technologyで人工知能・データサイエンスの学士（2022年11月〜2026年5月、7学期時点CGPA 8.36）。Himitsu LabsでAI研修開発者として、採用プラットフォーム、マルチモーダルGenAI、法律AIアシスタント、コンピュータビジョンとスマート農業のIEEE論文などに携わっています。",
+    "objectiveTitle": "キャリア目標",
+    "objective": "採用、医療、安全、法的アクセシビリティのために、モデル学習・ファインチューニングからフルスタック展開まで、スケーラブルでユーザー中心のAIソリューションを構築すること。",
+    "educationTitle": "学歴",
+    "degree": "学士 — 人工知能・データサイエンス",
+    "institution": "St. Joseph's Institute of Technology",
+    "year": "2022年11月〜2026年5月 · CGPA 8.36（7学期時点）",
+    "experienceHighlights": "経験ハイライト",
+    "experienceItems": [
+      "Himitsu Labs — AI研修開発者（2026年1月〜現在）",
+      "Altrosyn Technologies — ML研修（マルチモーダルGenAIミーム作成）",
+      "Read Automation — AI開発者（NeuroHireプラットフォーム）"
+    ],
+    "certificationsPreview": "資格"
+  },
+  "skills": {
+    "subtitle": "スキル",
+    "title": "技術的専門性",
+    "description": "インテリジェントでスケーラブルなプロダクト構築に使用する技術とツール。",
+    "categories": {
+      "programming": "プログラミング",
+      "ai": "AI / ML",
+      "backend": "バックエンド＆認証",
+      "database": "データベース",
+      "data": "データスキル",
+      "tools": "ツール＆プラットフォーム"
+    }
+  },
+  "experience": {
+    "subtitle": "経験",
+    "title": "私の歩み",
+    "description": "インターンシップ、研究、プロフェッショナルなマイルストーン。",
+    "types": {
+      "internship": "インターンシップ",
+      "freelance": "フリーランス",
+      "research": "受賞・成果",
+      "certification": "資格"
+    },
+    "items": {
+      "1": {
+        "title": "AI研修開発者",
+        "company": "Himitsu Labs",
+        "period": "2026年1月〜現在",
+        "description": "バックエンド・フロントエンドを横断したAIアプリ開発 — API、AIモジュール、ワークフロー、モデル統合、最新Web技術。",
+        "impact": [
+          "インテリジェントアプリ向けバックエンドAPIとAIワークフロー",
+          "AI機能開発とモデル統合",
+          "スケーラブルなアーキテクチャ、自動化、ユーザー中心設計"
+        ]
+      },
+      "2": {
+        "title": "機械学習研修生",
+        "company": "Altrosyn Technologies Pvt Ltd",
+        "period": "2025年5月〜12月",
+        "description": "マルチモーダル生成AIミームクリエイターを主導 — テキストや音声コマンドをミームに変換するGenAIアプリ。",
+        "impact": [
+          "コアAIモデルの学習、ファインチューニング、統合",
+          "マルチモーダルコンテンツ生成パイプライン",
+          "エンドツーエンド生成AIアプリ開発"
+        ]
+      },
+      "3": {
+        "title": "AI開発者",
+        "company": "Read Automation",
+        "period": "2025年2月〜5月",
+        "description": "採用ワークフロー全体を自動化し、リクルーター効率を向上するNeuroHireを構築。",
+        "impact": [
+          "AIによる履歴書解析と候補者ショートリスト",
+          "求人・応募追跡のリクルーターダッシュボード",
+          "カレンダー連携のスマート面接スケジューリング"
+        ]
+      },
+      "4": {
+        "title": "AI Innovate Hackathon — ファイナリスト",
+        "company": "Sri Eshwar College of Engineering (Thiran 2025)",
+        "period": "2025",
+        "description": "コインバトールのAI Innovate Hackathonファイナリスト — 応用志向のAIエンジニアリングプロジェクト。",
+        "impact": ["権威ある全国ハッカソンでの認知"]
+      },
+      "5": {
+        "title": "Project Expo 2k25 — ファイナリスト",
+        "company": "IEEE Education Society & IEEE Photonics Society",
+        "period": "2025",
+        "description": "St. Xavier's Catholic College of Engineeringでファイナリスト — 分野横断の上位プロジェクトに選出。",
+        "impact": ["IEEE関連プロジェクト博での認知"]
+      },
+      "6": {
+        "title": "Blaze a Trail 2.0 — 3位",
+        "company": "St. Joseph's Institute of Technology",
+        "period": "2025",
+        "description": "革新的問題解決で3位；Read Automationでのインターン選出と実践的AI自動化経験。",
+        "impact": [
+          "St. Joseph's Institute of Technologyでの受賞",
+          "Read Automationインターンへの道"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "ポートフォリオ",
+    "title": "注目プロジェクト",
+    "description": "GitHub上のオープンソースおよびプロフェッショナルAIプロジェクト。",
+    "categories": {
+      "all": "すべてのプロジェクト",
+      "ai": "AI / ML",
+      "web": "Webアプリ",
+      "fullstack": "フルスタック"
+    },
+    "empty": "このカテゴリのプロジェクトはまだありません。",
+    "featured": "注目プロジェクト",
+    "private": "非公開",
+    "viewCode": "コードを見る",
+    "liveDemo": "ライブデモ",
+    "moreOn": "詳細は",
+    "items": {
+      "1": {
+        "title": "医療チャットボットアシスタント",
+        "description": "Google Gemini AIを活用したFlask Webアプリ。疾患予測、症状分析、病院推薦を安全に処理。",
+        "highlights": [
+          "治療提案PDF生成付きAI診断",
+          "位置情報ベースの病院推薦システム",
+          "AI精度向上のためのフィードバックループ"
+        ]
+      },
+      "2": {
+        "title": "AI搭載事故支援システム",
+        "description": "事故検知、PaddleOCR/OpenCVによるナンバープレート抽出、ResNetによる負傷重症度予測を行うFlask AIシステム。",
+        "highlights": [
+          "Twilio APIによる自動緊急対応",
+          "当局・近隣病院への通知",
+          "重症度分類のディープラーニングパイプライン"
+        ]
+      },
+      "3": {
+        "title": "NeuroHire: AI採用プラットフォーム",
+        "description": "候補者スクリーニング自動化、インテリジェントな履歴書解析、リクルーターダッシュボードを備えたフルスタックAI採用プラットフォーム。",
+        "highlights": [
+          "ダッシュボードでの求人関連性による候補者ランキング",
+          "求人管理とスマートショートリスト",
+          "採用分析：採用期間とトップスキル",
+          "カレンダー連携のスマート面接スケジューリング"
+        ]
+      },
+      "4": {
+        "title": "Nyayavani: オフライン音声法律ガーディアン",
+        "description": "農村・低リテラシー層向けに多言語音声・テキストで法律ガイダンスを提供するオフラインAI法律アシスタント。",
+        "highlights": [
+          "PyTorchとBERT/IndicBERTによる法的状況検出",
+          "コンテキスト認識のNeo4j知識グラフ",
+          "オフライン STT/TTS: Whisper/VoskとCoqui TTS",
+          "FastAPI、React.js、PostgreSQLスタック"
+        ]
+      }
+    }
+  },
+  "certifications": {
+    "subtitle": "資格",
+    "title": "資格と学習",
+    "description": "AIとデータサイエンスの基盤を強化するプロフェッショナル資格とコース。",
+    "viewCredential": "資格を見る",
+    "items": {
+      "1": "NPTEL Elite認定 — データサイエンス",
+      "2": "KNIME Analytics Platformでのデータサイエンス — 基礎",
+      "3": "Data Science for Engineers — NPTEL",
+      "4": "Statistics 101 — IBM",
+      "5": "Prompt Engineering Essentials — Simplilearn"
+    }
+  },
+  "contact": {
+    "subtitle": "お問い合わせ",
+    "title": "ご連絡ください",
+    "description": "インターン、AI/MLポジション、コラボレーションを歓迎します。フォーム、メール、LinkedInからご連絡ください。",
+    "labels": {
+      "email": "メール",
+      "phone": "電話",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "location": "所在地"
+    },
+    "preferLinkedIn": "LinkedInがよろしければ",
+    "orBrowse": "またはコードは",
+    "form": {
+      "name": "お名前",
+      "email": "メール",
+      "message": "メッセージ",
+      "namePlaceholder": "お名前",
+      "emailPlaceholder": "you@email.com",
+      "messagePlaceholder": "ご機会やプロジェクトについてお聞かせください...",
+      "submit": "メッセージを送信",
+      "sending": "送信中...",
+      "deliveredTo": "メッセージの送信先"
+    }
+  },
+  "footer": {
+    "builtWith": "Next.js 15"
+  },
+  "currentlyAt": {
+    "title": "AI研修開発者",
+    "company": "Himitsu Labs",
+    "period": "2026年1月〜現在"
+  },
+  "loading": {
+    "initializing": "ポートフォリオを読み込み中..."
+  },
+  "theme": {
+    "studio": "テーマスタジオ",
+    "subtitle": "カラー + ライト/ダーク",
+    "dark": "ダーク",
+    "light": "ライト"
+  },
+  "notifications": {
+    "success": "メッセージを送信しました。折り返しご連絡します。",
+    "successInbox": "受信トレイに届きました。すぐに返信します。",
+    "required": "すべての項目が必須です。",
+    "invalidEmail": "有効なメールアドレスを入力してください。",
+    "sendFailed": "現在送信できません。直接メールでご連絡ください。",
+    "networkError": "ネットワークエラー。直接メールでご連絡ください。",
+    "serverError": "問題が発生しました。後でもう一度お試しください。",
+    "switchingLanguage": "言語を切り替え中..."
+  }
+}

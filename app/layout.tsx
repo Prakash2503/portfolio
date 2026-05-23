@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { LocaleProvider } from "@/components/providers/LocaleProvider";
+import { LocaleFade } from "@/components/LocaleFade";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
@@ -11,7 +14,10 @@ import { CurrentlyAt } from "@/components/CurrentlyAt";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
 import { JsonLd } from "@/components/JsonLd";
 import { PageBackground } from "@/components/PageBackground";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { LoadingScreen } from "@/components/LoadingScreen";
 import { siteConfig } from "@/data/portfolio";
+import { DEFAULT_MODE, DEFAULT_THEME, getThemeColors } from "@/lib/themes";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +32,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://prakash-portfolio.vercel.app";
+const defaultColors = getThemeColors(DEFAULT_THEME, DEFAULT_MODE);
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -64,6 +71,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: {
     canonical: siteUrl,
+    languages: {
+      en: siteUrl,
+      de: `${siteUrl}?lang=de`,
+      ja: `${siteUrl}?lang=ja`,
+    },
   },
 };
 
@@ -72,22 +84,55 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const c = defaultColors;
+
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html
+      lang="en"
+      className="scroll-smooth"
+      data-theme={DEFAULT_THEME}
+      data-mode={DEFAULT_MODE}
+      style={
+        {
+          "--theme-bg": c.background,
+          "--theme-bg-secondary": c.backgroundSecondary,
+          "--theme-fg": c.foreground,
+          "--theme-muted": c.muted,
+          "--theme-card": c.card,
+          "--theme-border": c.border,
+          "--theme-accent": c.accent,
+          "--theme-accent-secondary": c.accentSecondary,
+          "--theme-accent-rgb": c.accentRgb,
+          "--theme-accent-secondary-rgb": c.accentSecondaryRgb,
+          "--theme-gradient-from": c.gradientFrom,
+          "--theme-gradient-via": c.gradientVia,
+          "--theme-gradient-to": c.gradientTo,
+          "--theme-navbar": c.navbar,
+          "--theme-glow": c.glow,
+          "--theme-shadow": c.shadow,
+        } as CSSProperties
+      }
+    >
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
         <JsonLd />
         <ThemeProvider>
-          <PageBackground />
-          <ScrollProgress />
-          <AnimatedCursor />
-          <Navbar />
-          <CurrentlyAt />
-          <main className="relative z-[1] overflow-x-hidden">{children}</main>
-          <Footer />
-          <MobileStickyBar />
-          <BackToTop />
+          <LocaleProvider>
+            <LoadingScreen />
+            <PageBackground />
+            <ScrollProgress />
+            <AnimatedCursor />
+            <Navbar />
+            <CurrentlyAt />
+            <LocaleFade>
+              <main className="relative z-[1] overflow-x-hidden">{children}</main>
+              <Footer />
+            </LocaleFade>
+            <MobileStickyBar />
+            <BackToTop />
+            <ThemeSwitcher />
+          </LocaleProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "siteTitle": "Prakash S | KI-Ingenieur & Full-Stack-Entwickler",
+    "siteDescription": "Entwicklung intelligenter Systeme mit KI, Generativer KI, Computer Vision und modernen Full-Stack-Technologien."
+  },
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "experience": "Erfahrung",
+    "projects": "Projekte",
+    "certifications": "Zertifikate",
+    "contact": "Kontakt",
+    "resume": "Lebenslauf",
+    "downloadResume": "Lebenslauf herunterladen",
+    "language": "Sprache",
+    "selectLanguage": "Sprache wählen"
+  },
+  "hero": {
+    "openToWork": "Offen für Möglichkeiten",
+    "portfolioLabel": "Portfolio",
+    "greeting": "Hallo, ich bin",
+    "role": "KI-Trainee-Entwickler & Full-Stack-Ingenieur",
+    "tagline": "Entwicklung intelligenter Systeme mit KI, Generativer KI, Computer Vision und modernen Full-Stack-Technologien.",
+    "cgpa": "CGPA",
+    "repos": "Repos",
+    "ieeePapers": "IEEE-Publikationen",
+    "techStack": "Tech-Stack",
+    "downloadResume": "Lebenslauf herunterladen",
+    "contactMe": "Kontakt aufnehmen",
+    "viewProjects": "Projekte ansehen",
+    "availableForWork": "Verfügbar für Projekte",
+    "scroll": "Scrollen",
+    "typingRoles": [
+      "KI-Trainee-Entwickler",
+      "Full-Stack-KI-Ingenieur",
+      "Machine-Learning-Ingenieur",
+      "Generativer-KI-Entwickler"
+    ]
+  },
+  "about": {
+    "subtitle": "Über mich",
+    "title": "Wer ich bin",
+    "description": "Beruflicher Hintergrund, Ziele und Qualifikationen.",
+    "summaryTitle": "Berufliche Zusammenfassung",
+    "summary": "B.Tech in Künstlicher Intelligenz und Data Science am St. Joseph's Institute of Technology (Nov. 2022 – Mai 2026, CGPA 8,36 bis zum 7. Semester). KI-Trainee-Entwickler bei Himitsu Labs mit Erfahrung in Recruiting-Plattformen, multimodaler GenAI, juristischen KI-Assistenten und IEEE-veröffentlichter Forschung in Computer Vision und smarter Landwirtschaft.",
+    "objectiveTitle": "Karriereziel",
+    "objective": "Skalierbare, nutzerzentrierte KI-Lösungen zu entwickeln — vom Modelltraining und Fine-Tuning bis zum Full-Stack-Deployment — für Recruiting, Gesundheitswesen, Sicherheit und rechtliche Zugänglichkeit.",
+    "educationTitle": "Ausbildung",
+    "degree": "B.Tech — Künstliche Intelligenz und Data Science",
+    "institution": "St. Joseph's Institute of Technology",
+    "year": "Nov. 2022 – Mai 2026 · CGPA 8,36 (bis 7. Sem.)",
+    "experienceHighlights": "Berufliche Highlights",
+    "experienceItems": [
+      "KI-Trainee-Entwickler bei Himitsu Labs (Jan. 2026 – heute)",
+      "ML-Trainee bei Altrosyn Technologies — Multimodaler GenAI-Meme-Creator",
+      "KI-Entwickler bei Read Automation — NeuroHire-Plattform"
+    ],
+    "certificationsPreview": "Zertifikate"
+  },
+  "skills": {
+    "subtitle": "Fähigkeiten",
+    "title": "Technische Expertise",
+    "description": "Technologien und Tools, mit denen ich intelligente, skalierbare Produkte entwickle.",
+    "categories": {
+      "programming": "Programmierung",
+      "ai": "KI / ML",
+      "backend": "Backend & Auth",
+      "database": "Datenbank",
+      "data": "Datenkompetenz",
+      "tools": "Tools & Plattformen"
+    }
+  },
+  "experience": {
+    "subtitle": "Erfahrung",
+    "title": "Mein Werdegang",
+    "description": "Praktika, Forschung und berufliche Meilensteine.",
+    "types": {
+      "internship": "Praktikum",
+      "freelance": "Freelance",
+      "research": "Auszeichnung",
+      "certification": "Zertifikat"
+    },
+    "items": {
+      "1": {
+        "title": "KI-Trainee-Entwickler",
+        "company": "Himitsu Labs",
+        "period": "Jan. 2026 – heute",
+        "description": "KI-basierte Anwendungsentwicklung in Backend und Frontend — APIs, KI-Module, Workflow-Logik, Modellintegration und moderne Webtechnologien.",
+        "impact": [
+          "Backend-APIs und KI-Workflow-Logik für intelligente Apps",
+          "KI-Feature-Entwicklung und Modellintegration",
+          "Skalierbare Architektur, Automatisierung und nutzerzentrierte Lösungen"
+        ]
+      },
+      "2": {
+        "title": "Machine-Learning-Trainee",
+        "company": "Altrosyn Technologies Pvt Ltd",
+        "period": "Mai 2025 – Dez. 2025",
+        "description": "Leitung des Multimodal Generative AI Meme Creator — einer GenAI-App, die Text- oder Sprachbefehle in Memes umwandelt.",
+        "impact": [
+          "Training, Fine-Tuning und Integration zentraler KI-Modelle",
+          "Multimodale Content-Generierungs-Pipeline",
+          "End-to-End-Entwicklung generativer KI-Anwendungen"
+        ]
+      },
+      "3": {
+        "title": "KI-Entwickler",
+        "company": "Read Automation",
+        "period": "Feb. 2025 – Mai 2025",
+        "description": "Entwicklung von NeuroHire zur Automatisierung durchgängiger Einstellungsworkflows und höherer Recruiter-Effizienz.",
+        "impact": [
+          "KI-gestütztes Lebenslauf-Parsing und Kandidaten-Vorauswahl",
+          "Recruiter-Dashboard für Jobs und Bewerbungen",
+          "Intelligente Interviewplanung mit Kalenderintegration"
+        ]
+      },
+      "4": {
+        "title": "AI Innovate Hackathon — Finalist",
+        "company": "Sri Eshwar College of Engineering (Thiran 2025)",
+        "period": "2025",
+        "description": "Finalist beim AI Innovate Hackathon, Coimbatore — anwendungsorientiertes KI-Engineering-Projekt.",
+        "impact": ["Anerkennung bei prestigeträchtigem nationalem Hackathon"]
+      },
+      "5": {
+        "title": "Project Expo 2k25 — Finalist",
+        "company": "IEEE Education Society & IEEE Photonics Society",
+        "period": "2025",
+        "description": "Finalist am St. Xavier's Catholic College of Engineering — Projekt unter den besten Beiträgen aller Disziplinen.",
+        "impact": ["Anerkennung bei IEEE-Projekt-Expo"]
+      },
+      "6": {
+        "title": "Blaze a Trail 2.0 — 3. Platz",
+        "company": "St. Joseph's Institute of Technology",
+        "period": "2025",
+        "description": "3. Platz für innovatives Problemlösen; Auswahl für Praktikum bei Read Automation mit praktischer KI-Automatisierung.",
+        "impact": [
+          "Auszeichnung am St. Joseph's Institute of Technology",
+          "Führte zum Praktikum bei Read Automation"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "Portfolio",
+    "title": "Ausgewählte Projekte",
+    "description": "Open-Source- und professionelle KI-Projekte auf GitHub.",
+    "categories": {
+      "all": "Alle Projekte",
+      "ai": "KI / ML",
+      "web": "Web-Apps",
+      "fullstack": "Full Stack"
+    },
+    "empty": "Noch keine Projekte in dieser Kategorie.",
+    "featured": "Highlight-Projekt",
+    "private": "Privat",
+    "viewCode": "Code ansehen",
+    "liveDemo": "Live-Demo",
+    "moreOn": "Mehr auf",
+    "items": {
+      "1": {
+        "title": "Medizinischer Chatbot-Assistent",
+        "description": "Flask-Web-App mit Google Gemini AI für medizinische Vorhersagen, Symptomanalyse und Krankenhaus-Empfehlungen mit sicherer Datenverarbeitung.",
+        "highlights": [
+          "KI-gestützte Diagnose mit PDF-Erstellung für Behandlungsvorschläge",
+          "Standortbasiertes Krankenhaus-Empfehlungssystem",
+          "Feedback-Schleifen zur Verbesserung der KI-Genauigkeit"
+        ]
+      },
+      "2": {
+        "title": "KI-gestütztes Unfallhilfe-System",
+        "description": "Flask-basiertes KI-System zur Unfallerkennung, Kennzeichenextraktion mit PaddleOCR/OpenCV und Verletzungsschwere mit ResNet.",
+        "highlights": [
+          "Automatisierte Notfallreaktion über Twilio API",
+          "Benachrichtigung von Behörden und nahegelegenen Krankenhäusern",
+          "Deep-Learning-Pipeline zur Schwereklassifikation"
+        ]
+      },
+      "3": {
+        "title": "NeuroHire: KI-gestützte Recruiting-Plattform",
+        "description": "Full-Stack-KI-Recruiting-Plattform zur Automatisierung des Kandidaten-Screenings mit intelligenter Lebenslauf-Analyse und Recruiter-Dashboards.",
+        "highlights": [
+          "Kandidaten-Ranking nach Jobrelevanz im Dashboard",
+          "Stellenverwaltung und intelligente Vorauswahl",
+          "Recruiting-Analytics: Time-to-Hire und Top-Skills",
+          "Intelligente Interviewplanung mit Kalenderintegration"
+        ]
+      },
+      "4": {
+        "title": "Nyayavani: Offline juristischer Sprachassistent",
+        "description": "Offline-KI-Rechtsassistent mit mehrsprachiger Sprach- und Textberatung für ländliche und benachteiligte Nutzer.",
+        "highlights": [
+          "Rechtssituationserkennung mit PyTorch und BERT/IndicBERT",
+          "Neo4j-Wissensgraph für kontextbewusstes juristisches Reasoning",
+          "Offline STT/TTS: Whisper/Vosk und Coqui TTS",
+          "FastAPI-, React.js- und PostgreSQL-Stack"
+        ]
+      }
+    }
+  },
+  "certifications": {
+    "subtitle": "Zertifikate",
+    "title": "Qualifikationen & Weiterbildung",
+    "description": "Berufliche Zertifikate und Kurse, die meine KI- und Data-Science-Grundlage stärken.",
+    "viewCredential": "Zertifikat ansehen",
+    "items": {
+      "1": "NPTEL Elite-Zertifikat — Data Science",
+      "2": "Data Science in KNIME Analytics Platform — Grundkenntnisse",
+      "3": "Data Science for Engineers — NPTEL",
+      "4": "Statistics 101 — IBM",
+      "5": "Prompt Engineering Essentials — Simplilearn"
+    }
+  },
+  "contact": {
+    "subtitle": "Kontakt",
+    "title": "Kontakt aufnehmen",
+    "description": "Offen für Praktika, KI/ML-Rollen und Zusammenarbeit. Kontakt per Formular, E-Mail oder LinkedIn.",
+    "labels": {
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "location": "Standort"
+    },
+    "preferLinkedIn": "Lieber LinkedIn? Verbinden auf",
+    "orBrowse": "oder Code auf",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "namePlaceholder": "Ihr Name",
+      "emailPlaceholder": "sie@email.com",
+      "messagePlaceholder": "Erzählen Sie mir von Ihrer Opportunity oder Ihrem Projekt...",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "deliveredTo": "Nachrichten werden zugestellt an"
+    }
+  },
+  "footer": {
+    "builtWith": "Next.js 15"
+  },
+  "currentlyAt": {
+    "title": "KI-Trainee-Entwickler",
+    "company": "Himitsu Labs",
+    "period": "Jan. 2026 – heute"
+  },
+  "loading": {
+    "initializing": "Portfolio wird geladen..."
+  },
+  "theme": {
+    "studio": "Theme-Studio",
+    "subtitle": "Farbe + Hell/Dunkel",
+    "dark": "Dunkel",
+    "light": "Hell"
+  },
+  "notifications": {
+    "success": "Nachricht gesendet! Ich melde mich bald.",
+    "successInbox": "Nachricht im Posteingang! Ich antworte bald.",
+    "required": "Alle Felder sind erforderlich.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "sendFailed": "Senden derzeit nicht möglich. Bitte schreiben Sie mir direkt per E-Mail.",
+    "networkError": "Netzwerkfehler. Bitte schreiben Sie mir direkt per E-Mail.",
+    "serverError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.",
+    "switchingLanguage": "Sprache wird gewechselt..."
+  }
+}

@@ -32,16 +32,26 @@ export const techStack = [
   "OpenCV",
 ];
 
-export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Publications", href: "#publications" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
-];
+export const navItems = [
+  { id: "home", href: "#home" },
+  { id: "about", href: "#about" },
+  { id: "skills", href: "#skills" },
+  { id: "experience", href: "#experience" },
+  { id: "projects", href: "#projects" },
+  { id: "certifications", href: "#certifications" },
+  { id: "contact", href: "#contact" },
+] as const;
+
+export type NavItemId = (typeof navItems)[number]["id"];
+
+export const projectCategories = [
+  { id: "all" },
+  { id: "ai" },
+  { id: "web" },
+  { id: "fullstack" },
+] as const;
+
+export type ProjectCategory = (typeof projectCategories)[number]["id"];
 
 export const typingRoles = [
   "AI Trainee Developer",
@@ -158,6 +168,7 @@ export const skillCategories = [
 export const projects = [
   {
     id: 1,
+    category: "ai" as const,
     title: "Medical Chatbot Assistant",
     description:
       "Flask web app leveraging Google Gemini AI for medical condition prediction, symptom analysis, and hospital recommendations with secure data handling and user privacy.",
@@ -175,6 +186,7 @@ export const projects = [
   },
   {
     id: 2,
+    category: "ai" as const,
     title: "AI-Powered Accident Assistance System",
     description:
       "Flask-based AI system that detects accidents, extracts license plates via PaddleOCR and OpenCV, and predicts injury severity with a ResNet model.",
@@ -192,6 +204,7 @@ export const projects = [
   },
   {
     id: 3,
+    category: "fullstack" as const,
     title: "NeuroHire: AI-Powered Recruitment Platform",
     description:
       "Full-stack, AI-driven recruitment platform to automate candidate screening and streamline the hiring process with intelligent resume parsing and recruiter dashboards.",
@@ -213,6 +226,7 @@ export const projects = [
   },
   {
     id: 4,
+    category: "web" as const,
     title: "Nyayavani: Offline Voice Legal Guardian",
     description:
       "Offline AI legal assistant providing multilingual voice and text-based legal guidance for rural and low-literacy users.",

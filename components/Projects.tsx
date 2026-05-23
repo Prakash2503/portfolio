@@ -1,14 +1,15 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ExternalLink, Github, ArrowUpRight, Lock } from "lucide-react";
-import { projects } from "@/data/portfolio";
+import { projects, projectCategories, type ProjectCategory } from "@/data/portfolio";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { useReducedMotion } from "@/lib/useReducedMotion";
+import { useTranslations } from "@/hooks/useTranslations";
 import { cn } from "@/lib/utils";
 
 type Project = (typeof projects)[number];
@@ -58,6 +59,11 @@ function ProjectCard({
   const visibleTech = project.tech.slice(0, MAX_TAGS);
   const extraTech = project.tech.length - MAX_TAGS;
   const enableTilt = !reducedMotion && !isTouch;
+  const { t, messages } = useTranslations();
+  const itemKey = String(project.id);
+  const projectCopy = messages.projects.items[itemKey as keyof typeof messages.projects.items];
+  const highlights =
+    projectCopy && "highlights" in projectCopy ? (projectCopy.highlights as string[]) : [];
 
   return (
     <motion.div
@@ -94,7 +100,10 @@ function ProjectCard({
               featured ? "m-4 h-52 lg:m-5 lg:h-auto lg:min-h-[280px] lg:w-[45%]" : "h-52 sm:h-56"
             )}
           >
-            <div className="relative h-full min-h-[200px] w-full overflow-hidden rounded-lg bg-black/80 ring-1 ring-lime-500/20">
+            <div
+              className="relative h-full min-h-[200px] w-full overflow-hidden rounded-lg bg-black/80"
+              style={{ boxShadow: "inset 0 0 0 1px var(--theme-border)" }}
+            >
               {!imageError && (
                 <Image
                   src={project.image}
@@ -121,7 +130,7 @@ function ProjectCard({
               {isPrivate && (
                 <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-500/20 px-2.5 py-1 text-xs text-amber-200 backdrop-blur-sm">
                   <Lock className="h-3 w-3" />
-                  Private
+                  {t("projects.private")}
                 </span>
               )}
               {project.repoName && !isPrivate && (
@@ -135,20 +144,30 @@ function ProjectCard({
           <div className={cn("flex flex-1 flex-col p-6 sm:p-7", featured && "lg:py-8")}>
             {featured && (
               <span className="badge-cyber mb-2 w-fit font-semibold">
-                Featured Project
+                {t("projects.featured")}
               </span>
             )}
-            <h3 className="flex items-start justify-between gap-2 text-lg font-bold text-white sm:text-xl">
-              <span className="transition-all group-hover:gradient-text">{project.title}</span>
-              <ArrowUpRight className="h-5 w-5 shrink-0 text-slate-500 transition-all group-hover:text-lime-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <h3 className="flex items-start justify-between gap-2 text-lg font-bold text-theme-fg sm:text-xl">
+              <span className="transition-all group-hover:gradient-text">
+                {t(`projects.items.${itemKey}.title`)}
+              </span>
+              <ArrowUpRight className="h-5 w-5 shrink-0 text-theme-muted transition-all group-hover:text-theme-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </h3>
 
-            <p className="mt-3 body-text text-base">{project.description}</p>
+            <p className="mt-3 body-text text-base">
+              {t(`projects.items.${itemKey}.description`)}
+            </p>
 
             <ul className="mt-4 space-y-1.5">
-              {project.highlights.map((h) => (
+              {highlights.map((h) => (
                 <li key={h} className="flex gap-2 text-sm text-slate-400">
-                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-lime-500 shadow-[0_0_6px_#57ff1a]" />
+                  <span
+                    className="mt-2 h-1 w-1 shrink-0 rounded-full"
+                    style={{
+                      background: "var(--theme-accent)",
+                      boxShadow: "0 0 6px var(--theme-glow)",
+                    }}
+                  />
                   {h}
                 </li>
               ))}
@@ -170,7 +189,7 @@ function ProjectCard({
               )}
             </div>
 
-            <div className="mt-auto flex gap-3 border-t border-lime-500/10 pt-5">
+            <div className="mt-auto flex gap-3 border-t pt-5" style={{ borderColor: "var(--theme-border)" }}>
               <motion.a
                 href={project.github}
                 target="_blank"
@@ -179,8 +198,8 @@ function ProjectCard({
                 whileTap={{ scale: 0.97 }}
                 className="btn-cyber-secondary btn-shine h-11 flex-1"
               >
-                <Github className="h-4 w-4 text-lime-400" />
-                {hasRepo && !isPrivate ? "View Code" : "GitHub"}
+                <Github className="h-4 w-4 text-theme-accent" />
+                {hasRepo && !isPrivate ? t("projects.viewCode") : "GitHub"}
               </motion.a>
               {project.demo && (
                 <motion.a
@@ -192,7 +211,7 @@ function ProjectCard({
                   className="btn-cyber-primary btn-shine h-11 flex-1"
                 >
                   <ExternalLink className="h-4 w-4" />
-                  Live Demo
+                  {t("projects.liveDemo")}
                 </motion.a>
               )}
             </div>
@@ -204,29 +223,66 @@ function ProjectCard({
 }
 
 export function Projects() {
-  const [featured, ...rest] = projects;
+  const { t } = useTranslations();
+  const [filter, setFilter] = useState<ProjectCategory>("all");
+
+  const filtered = useMemo(() => {
+    if (filter === "all") return projects;
+    return projects.filter((p) => p.category === filter);
+  }, [filter]);
+
+  const [featured, ...rest] = filtered;
+  const showFeatured = filter === "all" && filtered.length > 0;
 
   return (
     <SectionWrapper id="projects" className="section-glow section-alt">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          subtitle="Portfolio"
-          title="Featured Projects"
-          description="Open-source and professional AI projects on GitHub."
+          subtitle={t("projects.subtitle")}
+          title={t("projects.title")}
+          description={t("projects.description")}
         />
 
         <motion.div
-          variants={staggerContainer}
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2"
+          viewport={{ once: true }}
+          className="mb-10 flex flex-wrap justify-center gap-2"
         >
-          <ProjectCard project={featured} featured />
-          {rest.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {projectCategories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setFilter(cat.id)}
+              className={cn(
+                "rounded-full border px-4 py-2 text-sm font-medium transition-all",
+                filter === cat.id ? "badge-cyber neon-glow" : "tag-cyber"
+              )}
+            >
+              {t(`projects.categories.${cat.id}`)}
+            </button>
           ))}
         </motion.div>
+
+        {filtered.length === 0 ? (
+          <p className="body-text text-center">{t("projects.empty")}</p>
+        ) : (
+          <motion.div
+            key={filter}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2"
+          >
+            {showFeatured && featured ? (
+              <ProjectCard project={featured} featured />
+            ) : null}
+            {(showFeatured ? rest : filtered).map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </motion.div>
+        )}
 
         <motion.p
           variants={fadeInUp}
@@ -235,7 +291,7 @@ export function Projects() {
           viewport={{ once: true }}
           className="body-text mt-12 text-center text-base"
         >
-          More on{" "}
+          {t("projects.moreOn")}{" "}
           <a
             href="https://github.com/Prakash2503"
             target="_blank"
